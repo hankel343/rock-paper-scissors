@@ -12,6 +12,7 @@ function playRound(userChoice, compChoice) {
     failMsg = "You lose!" + " " + compChoice + " beats " + userChoice; 
     tieMsg = "Tie! You and the computer both picked " + userChoice;
 
+    // wins
     if (userChoice == "rock" && compChoice == "scissors") {
         return successMsg;
     } else if (userChoice == "paper" && compChoice == "rock") {
@@ -20,6 +21,7 @@ function playRound(userChoice, compChoice) {
         return successMsg;
     }
 
+    // losses
     if (userChoice == "rock" && compChoice == "paper") {
         return failMsg;
     } else if (userChoice == "paper" && compChoice == "scissors") {
@@ -28,6 +30,7 @@ function playRound(userChoice, compChoice) {
         return failMsg;
     }
 
+    // tie condition
     if (userChoice == compChoice) {
         return tieMsg;
     }
